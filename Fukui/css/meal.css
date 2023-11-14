@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算をより予測しやすくするためのプロパティ */
+}
+
+.header {
+    width: 100%;
+    background-color: #000506;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between; /* リンクを左端と右端に配置 */
+    gap: 1em;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FEF4DC;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav a:last-child {
+    margin-left: auto; /* 最後のリンクを右端に移動 */
+}
+
+.nav a:last-child {
+    margin-left: auto; /* 最後のリンクを右端に移動 */
+}
+
+
+.container {
+    display: flex;
+    width: 712px;
+    background-color:#121212;
+    height: 742px;
+    justify-content: center;
+  }
+.big-story{
+  width: 100%;
+  display: flex;
+  height: 742px;
+}
+.video{
+  width: 758px;
+  height: 742px;
+  background-color: #000506;
+}
+.movie_place{
+  width: 758px;
+  height: 742px;
+}
+.text{
+  color: #FEF4DC;
+}
+.text h1{
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.text p{
+  margin-top: 40px;
+  letter-spacing: 4px; /* 2ピクセル分の文字間隔を設定 */
+  font-size: 20px;
+}
+
+
+.character {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

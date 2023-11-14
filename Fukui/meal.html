@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/meal.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html">Story</a>
+            <a href="index.html">Home</a>
+            <a href="trend.html">Trend</a>
+            <a href="post.html">Post</a>
+            <a href="mystery.html">Mystery</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="signin.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="big-story">
+            <div class="container">
+                <div class="text">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="video">
+                <video controls class="movie_place" autoplay muted>
+                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                    <source src="img/movie.ogg" type="video/ogg">
+                    お使いのブラウザは動画タグをサポートしていません。
+                </video>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/meal.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const video = document.querySelector('.movie_place');
+            // ブラウザのポリシーによってはこのコードは動作しないことがあります
+            video.play().catch(error => {
+                console.error("Video play failed:", error);
+                // エラーハンドリングをここに入れることができます
+                // 例えば、ユーザーにクリックしてビデオを再生するよう促すなど
+            });
+        });
+        function animateText(text, container, onComplete) {
+            container.textContent = ''; // コンテナの内容をクリア
+            let delay = 0;
+            let maxDelay = 0;
+    
+            const parts = text.split('\n');
+            parts.forEach((part, index) => {
+                for (let i = 0; i < part.length; i++) {
+                    let span = document.createElement('span');
+                    span.textContent = part[i];
+                    span.classList.add('character');
+                    span.style.animationDelay = `${delay}s`;
+                    container.appendChild(span);
+                    delay += 0.08; // 連続したアニメーションのため、遅延時間を短くする
+                    maxDelay = delay; // 最大遅延時間を更新
+                }
+                if (index < parts.length - 1) {
+                    container.appendChild(document.createElement('br'));
+                }
+            });
+    
+            // 全てのアニメーションが終了したら、コールバックを実行
+            if (typeof onComplete === 'function') {
+                setTimeout(onComplete, maxDelay * 4000); // 秒単位からミリ秒単位に変換
+            }
+        }
+    
+        window.addEventListener('DOMContentLoaded', (event) => {
+            animateText('鴨のロースト', document.querySelector('h1'), () => {
+                animateText('この極上の鴨のローストは、熟練のシェフ\nによって丁寧に調理され、香り高いスパイ\nスとハーブでマリネされます。\n\n低温でじっくりとローストされることで、\n肉の旨みが凝縮され、柔らかく、そして\nジューシーな食感を生み出しています。', document.querySelector('.text p'));
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

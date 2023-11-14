@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算をより予測しやすくするためのプロパティ */
+}
+main{
+    background-color: #fff4d8;
+}
+h1 {
+    color: #FEF4DC;
+}
+.header {
+    width: 100%;
+    background-color: #000506;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between; /* リンクを左端と右端に配置 */
+    gap: 1em;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FEF4DC;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav a:last-child {
+    margin-left: auto; /* 最後のリンクを右端に移動 */
+}
+.main_img_contaner{
+   display: flex;
+   justify-content: space-around;
+}
+.main_img{
+    margin-top: 37px;
+    margin-bottom: 32px;
+}
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+.QR{
+    font-size: 36px;
+    text-align: center;
+    border: #e5dcd1 solid;
+    background-color: #BDD5DF;
+    border-radius: 40px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+.QR_sub{
+    margin-left: 60%;
+    margin-bottom: 100px;
+}
+.stamp_box_contaner{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stamp_box_box_right{
+    position: relative;
+    width: 380px;
+    height: 420px;
+}
+.stamp_box_right{
+    position: absolute;
+    background-color: #e5dcd1;
+    width: 250px;
+    height: 250px;
+    z-index: 10;
+    top: 0px;
+}
+.right{
+    position: absolute;
+    height: 177px;
+    width: 177px;
+    background-color: #e5dcd1;
+    transform: rotate(45deg);
+    left: 161px;
+    top: 36px;
+    z-index: 10;
+}
+.stamp_box_box_bottom{
+    position: relative;
+    width: 256px;
+    height: 420px;
+}
+.stamp_box_bottom{
+    position: absolute;
+    background-color: #e5dcd1;
+    width: 250px;
+    height: 250px;
+    z-index: 10;
+}
+.bottom{
+    position: absolute;
+    height: 177px;
+    width: 177px;
+    background-color: #e5dcd1;
+    transform: rotate(45deg);
+    z-index: 10;
+    top: 162px;
+    left: 37px;
+}
+.stamp_box_box_left{
+    position: relative;
+    width: 380px;
+    height: 420px;
+}
+.stamp_box_left{
+    position: absolute;
+    background-color: #e5dcd1;
+    width: 250px;
+    height: 250px;
+    left: 129px;
+    z-index: 10;
+}
+.left{
+    position: absolute;
+    height: 177px;
+    width: 177px;
+    background-color: #e5dcd1;
+    transform: rotate(45deg);
+    z-index: 10;
+    top: 36px;
+    left: 40px;
+}
+.stamp_box_box_normal{
+    position: relative;
+    width: 256px;
+    height: 420px;
+}
+.stamp_box_normal{
+    position: absolute;
+    background-color: #e5dcd1;
+    width: 250px;
+    height: 250px;
+    z-index: 10;
+}
+.arrow{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: #f3c245;
+    transform: rotate(45deg);
+    z-index: 8;
+    top: 225px;
+    left: 37px;
+}
+.arrow_two{
+    position: absolute;
+    background-color: #fff4d8;
+    width: 250px;
+    height: 125px;
+    z-index: 9;
+    top: 200px;
+}
+.stamp{
+    position: absolute;
+    width: 250px;
+    top: 25px;
+    z-index: 20;
+}
+.stamp_left{
+    position: absolute;
+    width: 250px;
+    top: 25px;
+    left: 129px;
+    z-index: 20;
+}
+.stamp_box_last{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stamp_box_color{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-color: #e5dcd1;
+    z-index: 10;
+    left: 100px;
+    top: 70px;
+}
+.last_stamp{
+    position: absolute;
+    z-index: 20;
+    top: -80px;
+    left: 80px;
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算をより予測しやすくするためのプロパティ */
+}
+h1 {
+    color: #FEF4DC;
+}
+.header {
+    width: 100%;
+    background-color: #000506;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between; /* リンクを左端と右端に配置 */
+    gap: 1em;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FEF4DC;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav a:last-child {
+    margin-left: auto; /* 最後のリンクを右端に移動 */
+}
+.menu_box{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+main{
+    background-color: #FEF4DC;
+}
+.menu_all{
+    display: flex;
+    justify-content: space-around;
+}
+.title_in{
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+.title{
+    width: 120px;
+    font-size: 36px;
+    color: #F6EFED;
+    border-top: double #F6EFED;
+    border-bottom: double #F6EFED;
+    text-align: center;
+}
+.shop_name{
+    font-size: 40px;
+    margin-bottom: 70px;
+    font-weight: bold;
+    color: #F6EFED;
+}
+.menu_box_top{
+    background-color: #000506;
+    padding-bottom: 50px;
+}
+.top{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.shop_img{
+    width: 600px;
+    margin-top: 20px;
+}
+.subtitle{
+    margin-top: 80px;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+li{
+    font-size: 21px;
+}
+.menu_img{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.place_title{
+    color: #CAB9AB;
+}
+.place{
+    color: #F6EFED;
+    font-size: 21px;
+    margin-bottom: 10px;
+}

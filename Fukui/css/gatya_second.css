@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算をより予測しやすくするためのプロパティ */
+}
+
+.header {
+    width: 100%;
+    background-color: #000506;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between; /* リンクを左端と右端に配置 */
+    gap: 1em;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FEF4DC;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav a:last-child {
+    margin-left: auto; /* 最後のリンクを右端に移動 */
+}
+
+
+
+.gatya_play{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.gatyagatya img {
+    margin-left: 40px;
+    width: 105%;
+    height: 90%;
+}
