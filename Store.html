@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カフェ・カフェ</title>
+    <link rel="stylesheet" href="css/Store.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html">Story</a>
+            <a href="index.html">Home</a>
+            <a href="trend.html">Trend</a>
+            <a href="post.html">Post</a>
+            <a href="mystery.html">Mystery</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="signin.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="cafe-info">
+            <div class="info_container">
+                <div class="Store_name">
+                    <p> ハワイアンレストラン</p>
+                    <h1>カフェ・カイラ</h1>
+                </div>
+                <div class="rating">
+                    <p>レビュー</p>
+                    <h1 class="score">4.56</h1>
+                </div>
+                <div class="main_revew">
+                    <div class="chart">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="reviw_contain">
+                        <div class="revew_name">
+                            <p>味</p>
+                            <p>ボリューム</p>
+                            <p>サービス</p>
+                            <p>提供時間</p>
+                            <p>店内・内装</p>
+                            <p>清潔感</p>
+                        </div>
+                        <div class="stars">
+                            <div class="star_line">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <div class="star_line">
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <div class="star_line">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <div class="star_line">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <div class="star_line">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <div class="star_line">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                                <div class="star empty"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <p>ジャンル</p>
+                    <h2>＃焼肉　＃韓国料理</h2>
+                </div>
+                <div class="tags">
+                    <p>営業時間</p>
+                    <h2>AM9:00 - PM10:00</h2>
+                </div>
+                <div class="tags">
+                    <p>住所</p>
+                    <h2>福岡市OO町 OO番3-278</h2>
+                </div>
+            </div>
+            <div class="image_container">
+                <img src="img/kaira_tennnai.jpg" alt="Cafe Image 1" class="main_pin">
+            </div>
+        </section>
+        <section class="main_bottom">
+            <div class="container">
+                <div class="menu-item">
+                    <div class="bom1">
+                        <a href="maps.html">
+                            <div class="icon1">
+                                <button class="button" onclick="location.href='#menu';">Maps</button>
+                            </div>
+                            <h2>Maps</h2>
+                        </a>
+                    </div>
+                    <div class="line1"></div>
+                    <div class="promotion">
+                    <p class="price">通常価格390円〜会員価格290円〜謎品も特価！</p>
+                    <div class="line2"></div>
+                    <p>牛繋でしか味わうことのできない味がある。</p>
+                    <p><br></p>
+                    <p>◆390円のカルビやハラミが食べ放題！</p>
+                    <p>◆3人〜の会員登録で、890円のカルビ食べ放題、「5大看板」で、本当に満足した「味と価格」！</p>
+                    <p>◆お子様連れも大歓迎！小学生のお子様は会員価格！</p>
+                    <p><br></p>
+                    <p>グループの飲み会や宴会でもご利用ください！「焼いて 喰って 元氣！」</p>
+                  </div>
+                  <div class="line1"></div>
+                  <div class="bom2">
+                    <a href="menu.html">
+                        <div class="icon2">
+                            <button class="button2" onclick="location.href='#menu';">Menu</button>
+                        </div>
+                        <h2>Menu</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="line3"></div>
+            <div class="story_place">
+                <h3>User uploads story</h3>
+                <div class="show_space">
+                    <div class="movie_block ">
+                        <div class="movie_space">
+                            <video controls class="movie_place">
+                                <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                <source src="img/movie.ogg" type="video/ogg">
+                                お使いのブラウザは動画タグをサポートしていません。
+                            </video>
+                        </div>
+                        <div class="text_place">
+                            <h3>鴨のグリルステーキ</h3>
+                            <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                        </div>
+                    </div>
+                    <div class="movie_block">
+                        <div class="movie_space">
+                            <video controls class="movie_place">
+                                <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                <source src="img/movie.ogg" type="video/ogg">
+                                お使いのブラウザは動画タグをサポートしていません。
+                            </video>
+                        </div>
+                        <div class="text_place">
+                            <h3>鴨のグリルステーキ</h3>
+                            <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                        </div>
+                    </div>
+                    <div class="movie_block">
+                        <div class="movie_space">
+                            <video controls class="movie_place">
+                                <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                <source src="img/movie.ogg" type="video/ogg">
+                                お使いのブラウザは動画タグをサポートしていません。
+                            </video>
+                        </div>
+                        <div class="text_place">
+                            <h3>鴨のグリルステーキ</h3>
+                            <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                        </div>
+                    </div>  
+                    <div class="movie_block">
+                        <div class="movie_space">
+                            <video controls class="movie_place">
+                                <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                <source src="img/movie.ogg" type="video/ogg">
+                                お使いのブラウザは動画タグをサポートしていません。
+                            </video>
+                        </div>
+                        <div class="text_place">
+                            <h3>鴨のグリルステーキ</h3>
+                            <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const movieBlocks = document.querySelectorAll('.movie_block');
+
+                    window.addEventListener('scroll', function() {
+                        movieBlocks.forEach(movieBlock => {
+                            const rect = movieBlock.getBoundingClientRect();
+                            if(rect.top <= window.innerHeight && rect.bottom >= 0) {
+                                movieBlock.classList.add('visible');
+                            }
+                        });
+                    });
+                });
+            </script>  
+        </section>
+
+        </section>
+        <script>
+            // レーダーチャートのデータ
+            const data = {
+              labels: ['味', 'ボリューム', 'サービス', '提供時間', '店内・内装', '清潔感'],
+              datasets: [{
+                label: 'スキルセット',
+                data: [4, 1, 4, 4, 4, 6],
+                fill: true,
+                backgroundColor: 'rgb(250, 255, 30, 0.5)', // 透明な背景色に設定
+                borderColor: 'rgb(250, 255, 30, 0.5)',
+                pointBackgroundColor: 'rgb(250, 255, 30, 0.5)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 255, 255)'
+              }]
+            };
+            
+            const options = {
+                elements: {
+                    line: {
+                    borderWidth: 3
+                    }
+                },
+                scales: {
+                    r: {
+                    angleLines: {
+                        display: true,
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        min: 0,
+                        backdropColor: 'transparent' // Ticksの背景色を透明に
+                    },
+                    pointLabels: {
+                        font: {
+                        size: 9
+                        },
+                        color: 'rgba(255, 255, 255, 1)' // ポイントラベルの色を白色に
+                    }
+                    }
+                },
+                
+                };
+            
+            // レーダーチャートの生成
+            const ctx = document.getElementById('radarChart').getContext('2d');
+            const radarChart = new Chart(ctx, {
+              type: 'radar',
+              data: data,
+              options: options
+            });
+            </script>
+    </main>
+</body>
+</html>
