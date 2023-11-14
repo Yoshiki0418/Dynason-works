@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/trend.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html">Story</a>
+            <a href="index.html">Home</a>
+            <a href="trend.html">Trend</a>
+            <a href="post.html">Post</a>
+            <a href="mystery.html">Mystery</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="signin.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="top_section">
+            <!--タイトル-->
+            <h1 class="title">Trend</h1>
+
+            <!--統計表示-->
+            <div class="data_display" id="display1">
+                <div class="move_display2">
+                    <h1 class="display_title">統計データ</h1>
+                    <a href="#" class="right_move" id="move1">＞</a>
+                </div>
+                <div class="main_display">
+                    <div class="light_line"> </div>
+                    <h2 class="display_name">トレンド</h2>
+                    <div class="personal_block1">
+                        <div class="trend_rank_block">
+                            <div class="trend_title">
+                                <p class="rank_text">#1</p>
+                                <p class="trend_name">ボンボロー二</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="post_title">投稿数</p>
+                                <p class="post_times">345,678件</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="good_title">いいね数</p>
+                                <p class="good_times">12,345,678 ❤︎</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal_block">
+                        <div class="trend_rank_block">
+                            <div class="trend_title">
+                                <p class="rank_text">#2</p>
+                                <p class="trend_name">メロンパンアイス</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="post_title">投稿数</p>
+                                <p class="post_times">234,567件</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="good_title">いいね数</p>
+                                <p class="good_times">10,345,678 ❤︎</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal_block">
+                        <div class="trend_rank_block">
+                            <div class="trend_title">
+                                <p class="rank_text">#3</p>
+                                <p class="trend_name">ぴよりん</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="post_title">投稿数</p>
+                                <p class="post_times">123,456件</p>
+                            </div>
+                            <div class="post_display">
+                                <p class="good_title">いいね数</p>
+                                <p class="good_times">8,345,678 ❤︎</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="light_line2"> </div>
+                </div>
+            </div>
+
+
+            <!--アナリティクス表示-->
+            <div class="data_display" id="display2" style="display: none;">
+                <div class="move_display">
+                    <a href="#" class="left_move" id="move2">＜</a>
+                    <h1 class="display_title">アナリティクス</h1>
+                </div>
+                <div class="main_display">
+                    <div class="light_line"> </div>
+                    <h2 class="display_name">総計</h2>
+                    <div class="personal_block1">
+                        <div class="trend_rank_block">
+                            <div class="post_display">
+                                <p class="good_title">いいね数</p>
+                                <p class="good_times">12,345,678 ❤︎</p>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="myChart" width="180" height="83"></canvas>
+                    <div class="personal_block1">
+                        <div class="trend_rank_block">
+                            <div class="post_display">
+                                <p class="post_title">フォロワー数</p>
+                                <p class="post_times">5,678件</p>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="myChart2" width="180" height="83"></canvas>
+        
+                    <div class="light_line2"> </div>
+                </div>
+            </div>
+
+            <div class="selecr_mode" id="div1">
+                <div class="select_show">
+                    <div class="show_mode">
+                        <a href="#trend" id="linkSection1" class="select_now_block">ストーリー</a>  
+                    </div>
+                    <div class="show_mode">
+                        <a href="#trend" id="linkSection2" class="select_none">フォトグラフィー</a>  
+                    </div>
+                    <div class="show_mode">
+                        <a href="#trend" class="select_none">テーマ別コンテスト</a>  
+                    </div>
+                </div>
+                <div class="select_create">
+                    <div class="create_mode">
+                        <a href="post.html" class="create_story">Create Story</a>
+                    </div>
+                    <div class="create_mode">
+                        <a href="post_photo.html" class="create_photo">Create Photo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selecr_mode2" id="div2" style="display: none;">
+                <div class="select_show2">
+                    <div class="show_mode">
+                        <a href="#tren" id="linkSection3" class="select_none">ストーリー</a>  
+                    </div>
+                    <div class="show_mode">
+                        <a href="#trend" id="linkSection2" class="select_now_block">フォトグラフィー</a>  
+                    </div>
+                    <div class="show_mode">
+                        <a href="#trend" class="select_none">テーマ別コンテスト</a>  
+                    </div>
+                </div>
+                <div class="select_create">
+                    <div class="create_mode">
+                        <a href="post.html" class="create_story">Create Story</a>
+                    </div>
+                    <div class="create_mode">
+                        <a href="post_photo.html" class="create_photo">Create Photo</a>
+                    </div>
+                </div>
+            </div>
+            <img src="img/trend.png" alt="Delicious foods" class="top_pic">
+        </section>
+        <section class="display_section" id="section1">
+            <div class="display_block">
+                <div class="day_block">
+                    <h2>11月4日</h2>
+                    <div class="show_space">
+                        <div class="movie_block ">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display_block">
+                <div class="day_block">
+                    <h2>11月3日</h2>
+                    <div class="show_space">
+                        <div class="movie_block ">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                        <div class="movie_block">
+                            <div class="movie_space">
+                                <video controls class="movie_place">
+                                    <source src="mov/RPReplay_Final1698329566.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    お使いのブラウザは動画タグをサポートしていません。
+                                </video>
+                            </div>
+                            <div class="text_place">
+                                <h3>鴨のグリルステーキ</h3>
+                                <p>この極上の鴨のローストは、熟練のシェフによって丁寧に調理され、香り高いスパイスとハーブでマリネされます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const movieBlocks = document.querySelectorAll('.movie_block');
+
+                    window.addEventListener('scroll', function() {
+                        movieBlocks.forEach(movieBlock => {
+                            const rect = movieBlock.getBoundingClientRect();
+                            if(rect.top <= window.innerHeight && rect.bottom >= 0) {
+                                movieBlock.classList.add('visible');
+                            }
+                        });
+                    });
+                });
+            </script>  
+        </section>
+        <section class="display_section2" id="section2" style="display: none;">
+            <div class="display_block">
+                <div class="day_block">
+                    <h2>10月</h2>
+                    <div class="show_space">
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                    </div>
+                </div>
+                <div class="day_block">
+                    <h2>9月</h2>
+                    <div class="show_space">
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                        <div class="pic_block ">
+                            <img src="img/1.jpg" alt="Delicious foods" class="post_pic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const movieBlocks = document.querySelectorAll('.pic_block');
+
+                    window.addEventListener('scroll', function() {
+                        movieBlocks.forEach(movieBlock => {
+                            const rect = movieBlock.getBoundingClientRect();
+                            if(rect.top <= window.innerHeight && rect.bottom >= 0) {
+                                movieBlock.classList.add('visible');
+                            }
+                        });
+                    });
+                });
+            </script> 
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var linkSection1 = document.getElementById('linkSection1');
+    var linkSection1 = document.getElementById('linkSection3');
+    var linkSection2 = document.getElementById('linkSection2');
+    
+    var section1 = document.getElementById('section1');
+    var section2 = document.getElementById('section2');
+    
+    var div1 = document.getElementById('div1');
+    var div2 = document.getElementById('div2');
+    
+    if(linkSection1 && section1 && section2 && div1 && div2) {
+        linkSection1.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            section1.style.display = '';  // この行を変更
+            section2.style.display = 'none';
+
+            div1.style.display = '';  // この行を変更
+            div2.style.display = 'none';
+        });
+    }
+
+    if(linkSection2 && section1 && section2 && div1 && div2) {
+        linkSection2.addEventListener('click', function(event) {
+            event.preventDefault();
+            section1.style.display = 'none';
+            section2.style.display = '';  // この行を変更
+
+            div1.style.display = 'none';
+            div2.style.display = '';  // この行を変更
+        });
+    }
+});
+        </script>
+        <script>
+            const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'line', // ラインチャートを指定
+                    data: {
+                        labels: ['H29', 'H30','H31','R1', 'R2', 'R3'], // X軸のラベル
+                        datasets: [{
+                            label: 'Dataset 1', // データセットのラベル
+                            data: [0, 500000, 1500000, 5000000, 8000000, 10000000], // Y軸のデータ
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)', // グラフの背景色
+                            borderColor: 'rgba(54, 162, 235, 1)', // グラフの境界線の色
+                            borderWidth: 1, // 境界線の幅
+                            fill: true, // エリア下を塗りつぶす
+                            tension: 0.4 // 線のカーブの強さ
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true, // Y軸のスケールを0から始める
+                                ticks: {
+                                    color: 'rgb(255,247,233)' // Y軸のティック（ラベル）の色を赤に変更
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: 'rgb(255,247,233)' // Y軸のティック（ラベル）の色を赤に変更
+                                }
+                            }
+                        }
+                    }
+                });
+
+        </script>
+        <script>
+            const ctx2 = document.getElementById('myChart2').getContext('2d');
+                const myChart2 = new Chart(ctx2, {
+                    type: 'line', // ラインチャートを指定
+                    data: {
+                        labels: ['H29', 'H30','H31','R1', 'R2', 'R3'], // X軸のラベル
+                        datasets: [{
+                            label: 'Dataset 1', // データセットのラベル
+                            data: [0, 500, 1000,  4500, 5000, 5678], // Y軸のデータ
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)', // グラフの背景色
+                            borderColor: 'rgba(54, 162, 235, 1)', // グラフの境界線の色
+                            borderWidth: 1, // 境界線の幅
+                            fill: true, // エリア下を塗りつぶす
+                            tension: 0.4 // 線のカーブの強さ
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true, // Y軸のスケールを0から始める
+                                ticks: {
+                                    color: 'rgb(255,247,233)' // Y軸のティック（ラベル）の色を赤に変更
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: 'rgb(255,247,233)' // Y軸のティック（ラベル）の色を赤に変更
+                                }
+                            }
+                        }
+                    }
+                });
+
+        </script>
+         <script>
+           document.addEventListener('DOMContentLoaded', function() {
+  var linkSection10 = document.getElementById('move1');
+  var linkSection20 = document.getElementById('move2');
+  
+  var section10 = document.getElementById('display1');
+  var section20 = document.getElementById('display2');
+  
+  if(linkSection10 && section10 && section20) {
+    linkSection10.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        section10.style.display = 'none'; // 表示スタイルに応じて変更
+        section20.style.display = '';
+    });
+  }
+
+  if(linkSection20 && section10 && section20) {
+    linkSection20.addEventListener('click', function(event) {
+        event.preventDefault();
+        section10.style.display = '';
+        section20.style.display = 'none'; // 表示スタイルに応じて変更
+    });
+  }
+});
+
+        </script>
+        
+        
+    </main>
+
+</body>
+</html>
