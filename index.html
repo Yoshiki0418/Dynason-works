@@ -42,8 +42,7 @@
                 <div class="movie_block">
                     <div class="movie_space">
                         <video controls class="movie_place" autoplay muted>
-                            <source src="mov/IMG_5854.mp4" type="video/mp4">
-                            <source src="img/movie.ogg" type="video/ogg">
+                            <!-- 動的にソースが挿入されます -->
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                         <div class="overlay" onclick="redirectToPage();"></div>
@@ -52,8 +51,7 @@
                 <div class="movie_block">
                     <div class="movie_space">
                         <video controls class="movie_place" autoplay muted>
-                            <source src="mov/screen-20231105-132056~2.mp4" type="video/mp4">
-                            <source src="img/movie.ogg" type="video/ogg">
+                            <!-- 動的にソースが挿入されます -->
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                         <div class="overlay" onclick="redirectToPage();"></div>
@@ -62,8 +60,7 @@
                 <div class="movie_block">
                     <div class="movie_space">
                         <video controls class="movie_place" autoplay muted>
-                            <source src="mov/IMG_5854.mp4" type="video/mp4">
-                            <source src="img/movie.ogg" type="video/ogg">
+                            <!-- 動的にソースが挿入されます -->
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                         <div class="overlay" onclick="redirectToPage();"></div>
@@ -72,8 +69,7 @@
                 <div class="movie_block">
                     <div class="movie_space">
                         <video controls class="movie_place" autoplay muted>
-                            <source src="mov/screen-20231105-132056~2.mp4" type="video/mp4">
-                            <source src="img/movie.ogg" type="video/ogg">
+                            <!-- 動的にソースが挿入されます -->
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                         <div class="overlay" onclick="redirectToPage();"></div>
@@ -372,6 +368,28 @@
                 event.stopPropagation();
             });
         </script>
+        <script>
+            var videoFiles = [
+                'mov/IMG_5854.mp4',
+                'mov/screen-20231105-132056~2.mp4',
+                // 他の動画ファイル名をここに追加
+            ];
+        
+            function setRandomVideoSource() {
+                var videoElements = document.querySelectorAll('.movie_place');
+        
+                videoElements.forEach(function(videoElement) {
+                    var randomIndex = Math.floor(Math.random() * videoFiles.length);
+                    var videoSource = videoFiles[randomIndex];
+        
+                    videoElement.innerHTML = '<source src="' + videoSource + '" type="video/mp4">';
+                    videoElement.load(); // 新しいソースでビデオを再読み込み
+                });
+            }
+        
+            window.onload = setRandomVideoSource;
+        </script>
+        
 
     </main>
 </body>
