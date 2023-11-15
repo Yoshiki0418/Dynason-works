@@ -138,6 +138,12 @@ const numCircles = 16;
 const degreesIncrement = 360 / numCircles;
 let currentRotation = 0;
 
+const videoFiles = [
+  "mov/IMG_5854.mp4",
+  "mov/screen-20231105-132056~2.mp4",
+  // 他の動画ファイルのパス...
+];
+
 // Create circles and assign IDs
 for (let i = 0; i < numCircles; i++) {
   const circle = document.createElement('div');
@@ -149,9 +155,11 @@ for (let i = 0; i < numCircles; i++) {
   video.setAttribute('autoplay', '');
   video.setAttribute('muted', '');
   video.setAttribute('loop', '');
+  // 動画ファイルをランダムに選択
+  const randomVideoPath = videoFiles[Math.floor(Math.random() * videoFiles.length)];
   // Create source element for the video
   const source = document.createElement('source');
-  source.src = "IMG_5854.mp4"; // Correct the path
+  source.src = randomVideoPath; // ランダムに選ばれたパスを使用
   source.type = 'video/mp4';
 
   video.style.width = '100%';
