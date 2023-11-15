@@ -151,7 +151,7 @@ for (let i = 0; i < numCircles; i++) {
   video.setAttribute('loop', '');
   // Create source element for the video
   const source = document.createElement('source');
-  source.src = "mov/RPReplay_Final1698329566.mp4"; // Correct the path
+  source.src = "IMG_5854.mp4"; // Correct the path
   source.type = 'video/mp4';
 
   video.style.width = '100%';
@@ -179,6 +179,10 @@ function rotateCircles() {
     let newRotation = degreesIncrement * i + currentRotation;
     let scale = Math.abs(newRotation % 360 - 90) < degreesIncrement / 2 ? 3.0 : 1;
     circle.style.transform = `rotate(${newRotation}deg) translateX(900px) scale(${scale})`;
+
+    // video要素の角度を固定するために逆の回転を適用
+    const video = circle.querySelector('video');
+    video.style.transform = `rotate(${-newRotation}deg)`;
   }
 }
 
@@ -194,6 +198,10 @@ function rotateCirclesReverse() {
     let newRotation = degreesIncrement * i + currentRotation;
     let scale = Math.abs(newRotation % 360 - 90) < degreesIncrement / 2 ? 3.0 : 1;
     circle.style.transform = `rotate(${newRotation}deg) translateX(900px) scale(${scale})`;
+
+    // video要素の角度を固定するために逆の回転を適用
+    const video = circle.querySelector('video');
+    video.style.transform = `rotate(${-newRotation}deg)`;
   }
 }
 
