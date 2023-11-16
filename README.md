@@ -1,5 +1,6 @@
 # Dynason-works
-福井県で開催されたハッカソン「ダイナソン」で作成したWEBサイトです。　　作成期間：３日
+福井県で開催されたハッカソン「ダイナソン」で作成したWEBサイトです。　
+作成期間：３日
 ＃URL: https://yoshiki0418.github.io/Dynason-works/
 
 ## 目的
