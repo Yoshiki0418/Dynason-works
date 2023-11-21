@@ -19,6 +19,9 @@
 - HTML/CSS
 - JavaScript
 
+# 共同開発者
+### [Teruさん](https://github.com/blueshine14)
+
 
 ## セットアップ
 
