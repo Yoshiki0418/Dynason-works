@@ -14,6 +14,9 @@
 - ランダムモードで新たな食との出会いを創出
 - 「Google 検索」や「SNS 」などの複数のページを経由する必要ない
 
+## デザイン（担当：[Yoshiki0418](https://github.com/Yoshiki0418)）
+https://www.figma.com/design/j5huLabQ9pUcphPLNNZz25/Untitled?node-id=0-1&t=xsFQFkPiVitOhqBN-0
+
 ## 技術スタック
 
 - HTML/CSS
