@@ -1,5 +1,5 @@
 # Dynason-works
-福井県で開催されたハッカソン「ダイナソン」で作成したWEBサイトです。　
+福井県で開催されたハッカソン「ダイナソン」で作成したWEBサイトです。　フロントエンド（HTML,CSS,JavaScript）でデザインのみで競うハッカソンでした。初めてHTML,CSS,JavaScriptを使用して、Webサイトの画面がどのように作成されているのかを学ぶことができました。
 - 作成期間：３日
 - ＃URL: https://yoshiki0418.github.io/Dynason-works/
 
